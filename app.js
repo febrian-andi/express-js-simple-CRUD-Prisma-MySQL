@@ -2,12 +2,18 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-
 var indexRouter = require('./routes/index');
 var employeesRouter = require('./routes/employees');
 
 var app = express();
 
+
+var cors = require('cors');
+app.use(cors({
+    origin: 'http://localhost:5173',
+  }));
+
+  
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));

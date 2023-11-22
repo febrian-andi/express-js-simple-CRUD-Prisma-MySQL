@@ -29,7 +29,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `employees` (
   `id_employee` int(11) NOT NULL,
-  `nama` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
   `job` varchar(255) NOT NULL,
   `salary` int(4) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -38,10 +38,10 @@ CREATE TABLE `employees` (
 -- Dumping data for table `employee`
 --
 
-INSERT INTO `employees` (`id_employee`, `nama`, `job`, `salary`) VALUES
+INSERT INTO `employees` (`id_employee`, `name`, `job`, `salary`) VALUES
 (1, 'Josh', 'Intern', 5000),
 (4, 'Lisa', 'Manager', 7500),
-(22, 'Rima', 'Analyst', 6000);
+(22, 'Rima', 'Software Engineer', 5600);
 
 --
 -- Indexes for dumped tables
@@ -52,7 +52,7 @@ INSERT INTO `employees` (`id_employee`, `nama`, `job`, `salary`) VALUES
 --
 ALTER TABLE `employees`
   ADD PRIMARY KEY (`id_employee`),
-  ADD UNIQUE KEY `nama` (`nama`);
+  ADD UNIQUE KEY `name` (`name`);
 
 --
 -- AUTO_INCREMENT for dumped tables
